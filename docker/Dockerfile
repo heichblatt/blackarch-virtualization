@@ -1,6 +1,6 @@
 FROM base/archlinux
 RUN pacman --noconfirm -Sy archlinux-keyring && \
-    pacman --noconfirm -S expect arch-install-scripts && \
+    pacman --noconfirm -S expect arch-install-scripts sed tar && \
     pacman -Scc
 ADD ./build.sh /usr/local/bin
 ADD ./build-helper.sh /usr/local/bin

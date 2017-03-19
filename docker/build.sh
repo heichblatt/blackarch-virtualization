@@ -33,7 +33,7 @@ msg()
 }
 
 msg 'checking requirements'
-REQUIREMENTS="pacstrap expect"
+REQUIREMENTS="pacstrap expect sed tar"
 for req in $REQUIREMENTS ; do
 	hash $req &>/dev/null || {
 		echo "Could not find $req."
